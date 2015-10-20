@@ -60,7 +60,7 @@ namespace ArrayList
 
         public void Sort()
         {
-            Array.Sort(_data);
+            Array.Sort(_data, 0, Length);
         }
 
         public T TakeAt(int index)
@@ -150,8 +150,8 @@ namespace ArrayList
             if (obj == null)
                 return 1;
 
-            //Student otherStudent = obj as Student;
-            Student otherStudent = (Student)obj;
+            Student otherStudent = obj as Student;
+            //Student otherStudent = (Student) obj;
             if (otherStudent != null)
             {
                 return this.GPA.CompareTo(otherStudent.GPA);
